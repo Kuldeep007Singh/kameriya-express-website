@@ -1,0 +1,134 @@
+.hero {
+  background: var(--navy);
+  background-image: linear-gradient(115deg, var(--navy) 0%, var(--navy-dark) 100%);
+  padding: 3.5rem 0 0;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-copy .eyebrow {
+  color: #ffb35c;
+}
+
+.hero-copy h1 {
+  color: var(--white);
+  font-size: 2.4rem;
+  max-width: 20ch;
+  margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+  color: #c7cbe6;
+  font-size: 1rem;
+  max-width: 52ch;
+  margin-bottom: 0;
+}
+
+.track-widget {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem 1.5rem;
+  transform: translateY(28px);
+  box-shadow: 0 8px 24px rgba(10, 22, 64, 0.25);
+}
+
+.track-widget-label {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.track-widget-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.track-widget-form input {
+  flex: 1;
+}
+
+.stats-bar {
+  background: var(--paper-alt);
+  border-bottom: 1px solid var(--line);
+  padding-top: 3.5rem;
+}
+
+.stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.service-tile {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.service-tile h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.service-tile p {
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.cta-band {
+  background: var(--navy-dark);
+  border-radius: 0;
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .hero-copy h1 { font-size: 1.9rem; max-width: none; }
+  .track-widget-form { flex-direction: column; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: 1fr 1fr; }
+  .cta-inner { flex-direction: column; text-align: center; }
+  .track-widget { transform: none; margin-top: 1.5rem; }
+}

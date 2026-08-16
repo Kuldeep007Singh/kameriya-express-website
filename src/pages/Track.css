@@ -1,0 +1,125 @@
+.track-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 480px;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.track-error {
+  color: #b42318;
+  background: #fef3f2;
+  border: 1px solid #fda29b;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+.track-result {
+  margin-top: 2rem;
+  max-width: 720px;
+}
+
+.track-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.status-pill {
+  background: var(--teal);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.stage-tracker {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 0.5rem;
+  position: relative;
+}
+
+.stage-tracker::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: var(--grey-light);
+  z-index: 0;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.stage-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--grey-light);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 1px var(--grey-light);
+}
+
+.stage.done .stage-dot {
+  background: var(--teal);
+  box-shadow: 0 0 0 1px var(--teal);
+}
+
+.stage-label {
+  font-size: 0.78rem;
+  text-align: center;
+  color: var(--grey);
+  font-weight: 600;
+}
+
+.stage.done .stage-label { color: var(--navy); }
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  border-left: 2px solid var(--grey-light);
+}
+
+.timeline li {
+  padding: 0 0 1.2rem 1.2rem;
+  position: relative;
+  font-size: 0.92rem;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -6.5px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 2px solid var(--white);
+}
+
+.timeline-status { font-weight: 700; color: var(--navy); }
+.timeline-location { color: var(--ink); }
+.timeline-time { display: block; color: var(--grey); font-size: 0.8rem; margin-top: 0.15rem; }
+.timeline-note { color: var(--grey); font-size: 0.85rem; margin: 0.3rem 0 0; }
+
+@media (max-width: 600px) {
+  .track-form { flex-direction: column; }
+  .stage-label { font-size: 0.68rem; }
+}
