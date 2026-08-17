@@ -24,6 +24,7 @@ export default function AdminDashboard() {
   const [message, setMessage] = useState(null)
 
   const [newParcel, setNewParcel] = useState({
+    tracking_id: '',
     sender_name: '', sender_city: '', receiver_name: '', receiver_city: '',
     origin: '', destination: '',
   })
@@ -46,16 +47,24 @@ export default function AdminDashboard() {
   async function handleCreateParcel(e) {
     e.preventDefault()
     setMessage(null)
-    const tracking_id = generateTrackingId()
+
+    const tracking_id = newParcel.tracking_id.trim()
+      ? newParcel.tracking_id.trim().toUpperCase()
+      : generateTrackingId()
+
+    const { tracking_id: _omit, ...parcelFields } = newParcel
 
     const { data, error } = await supabase
       .from('parcels')
-      .insert([{ tracking_id, ...newParcel }])
+      .insert([{ tracking_id, ...parcelFields }])
       .select()
       .single()
 
     if (error) {
-      setMessage({ type: 'error', text: 'Could not create parcel: ' + error.message })
+      const friendly = error.code === '23505'
+        ? `Tracking ID "${tracking_id}" is already in use — pick a different one.`
+        : 'Could not create parcel: ' + error.message
+      setMessage({ type: 'error', text: friendly })
       return
     }
 
@@ -65,7 +74,7 @@ export default function AdminDashboard() {
     }])
 
     setMessage({ type: 'success', text: `Parcel created: ${tracking_id}` })
-    setNewParcel({ sender_name: '', sender_city: '', receiver_name: '', receiver_city: '', origin: '', destination: '' })
+    setNewParcel({ tracking_id: '', sender_name: '', sender_city: '', receiver_name: '', receiver_city: '', origin: '', destination: '' })
     loadParcels()
   }
 
@@ -129,6 +138,8 @@ export default function AdminDashboard() {
         <div className="card">
           <h3>Create New Parcel</h3>
           <form onSubmit={handleCreateParcel} className="admin-form">
+            <input placeholder="Tracking ID (leave blank to auto-generate)" value={newParcel.tracking_id}
+              onChange={(e) => setNewParcel({ ...newParcel, tracking_id: e.target.value })} />
             <input placeholder="Sender name" value={newParcel.sender_name}
               onChange={(e) => setNewParcel({ ...newParcel, sender_name: e.target.value })} />
             <input placeholder="Sender city / origin" value={newParcel.origin}
