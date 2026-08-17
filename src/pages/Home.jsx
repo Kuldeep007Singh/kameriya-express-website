@@ -20,9 +20,9 @@ export default function Home() {
   ]
 
   const stats = [
-    { value: '500+', label: 'Corporate Clients' },
-    { value: '25+', label: 'States Covered' },
-    { value: '10,000+', label: 'Shipments Delivered' },
+    { value: '50+', label: 'Corporate Clients' },
+    { value: '28', label: 'States Covered' },
+    { value: '50,000+', label: 'Shipments Delivered' },
     { value: 'ISO 9001', label: '2008 Certified' },
   ]
 
@@ -45,7 +45,7 @@ export default function Home() {
               <input
                 value={trackingId}
                 onChange={(e) => setTrackingId(e.target.value)}
-                placeholder="Enter tracking ID (e.g. KMY24081401)"
+                placeholder="Enter tracking ID (e.g. 2230001)"
               />
               <button type="submit" className="btn btn-primary">Track</button>
             </form>
