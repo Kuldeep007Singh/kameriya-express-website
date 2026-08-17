@@ -44,9 +44,6 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <Link to="/admin/login" className="btn btn-navy navbar-admin" onClick={() => setOpen(false)}>
-              Staff Login
-            </Link>
           </nav>
 
           <button
