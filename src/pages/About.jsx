@@ -1,4 +1,12 @@
+import { Target, Award, Map } from 'lucide-react'
+
 export default function About() {
+  const points = [
+    { icon: Target, title: '[Placeholder] Our Mission', desc: 'Describe what drives the business — reliability, speed, coverage, etc.' },
+    { icon: Award, title: 'ISO 9001:2008 Certified', desc: 'Quality-managed operations, formally certified — a real trust signal for your corporate clients.' },
+    { icon: Map, title: '[Placeholder] Our Reach', desc: 'List the cities/regions you cover, or describe your network here.' },
+  ]
+
   return (
     <div className="container section">
       <span className="eyebrow">About Us</span>
@@ -10,19 +18,14 @@ export default function About() {
         what makes your service different, and who you serve.
       </p>
 
-      <div className="grid-3" style={{ marginTop: '2.5rem' }}>
-        <div className="card">
-          <h3>[Placeholder] Our Mission</h3>
-          <p>Describe what drives the business — reliability, speed, coverage, etc.</p>
-        </div>
-        <div className="card">
-          <h3>ISO 9001:2008 Certified</h3>
-          <p>Quality-managed operations, formally certified — a real trust signal for your corporate clients.</p>
-        </div>
-        <div className="card">
-          <h3>[Placeholder] Our Reach</h3>
-          <p>List the cities/regions you cover, or describe your network here.</p>
-        </div>
+      <div className="service-grid" style={{ marginTop: '2.5rem' }}>
+        {points.map((p) => (
+          <div className="service-tile" key={p.title}>
+            <div className="service-icon"><p.icon size={22} /></div>
+            <h3>{p.title}</h3>
+            <p>{p.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
