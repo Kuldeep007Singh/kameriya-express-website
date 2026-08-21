@@ -72,7 +72,7 @@ export default function Track() {
         <input
           value={trackingId}
           onChange={(e) => setTrackingId(e.target.value)}
-          placeholder="e.g. KMY24081401"
+          placeholder="e.g. 2230001"
         />
         <button type="submit" className="btn btn-primary" disabled={loading}>
           {loading ? 'Searching…' : 'Track'}
