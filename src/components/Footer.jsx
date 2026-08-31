@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-col footer-col-brand">
           <img src="/logo.png" alt="Kameriya Express logo" className="footer-logo" />
-          <p>Total Transportation Solutions. Pan-India B2B courier and cargo services, ISO 9001:2008 certified.</p>
+          <p>Total Transportation Solutions. Pan-India B2B courier and cargo services. </p>
         </div>
 
         <div className="footer-col">
@@ -27,16 +27,15 @@ export default function Footer() {
 
         <div className="footer-col">
           <h4>Contact</h4>
-          <p>+91 XXXXX XXXXX</p>
+          <p>+91 9586516651, +91 9265630571</p>
           <p>contact@kameriyaexpress.com</p>
-          <p>Ahmedabad, Gujarat, India</p>
+          <p>L-7/A, Shree Ghantakarn Mahaveer Market, Sarangpur, Ahmedabad, Gujarat, India</p>
         </div>
       </div>
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <span>&copy; {new Date().getFullYear()} Kameriya Express Couriers and Cargo Services. All rights reserved.</span>
-          <span className="footer-iso">ISO 9001:2008 Certified Company</span>
         </div>
       </div>
     </footer>
