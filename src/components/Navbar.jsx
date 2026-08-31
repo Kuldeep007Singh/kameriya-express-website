@@ -18,11 +18,12 @@ export default function Navbar() {
       <div className="utility-bar">
         <div className="container utility-bar-inner">
           <div className="utility-links">
-            <span>Ph: +91 XXXXX XXXXX</span>
+            <span>Ph: +91 95865 16651</span>
+            <span>+91 92656 30571</span>
             <span>contact@kameriyaexpress.com</span>
           </div>
-          <div className="utility-links">
-            <span className="iso-badge">ISO 9001:2008 Certified</span>
+          <div className="utility-network">
+            Pan-India Network
           </div>
         </div>
       </div>
