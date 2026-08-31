@@ -29,7 +29,6 @@ export default function Home() {
     { icon: Building, value: '500+', label: 'Corporate Clients' },
     { icon: Globe2, value: '28', label: 'States Covered' },
     { icon: Users, value: '1,00,000+', label: 'Shipments Delivered' },
-    { icon: Award, value: 'ISO 9001', label: '2008 Certified' },
   ]
 
   return (
