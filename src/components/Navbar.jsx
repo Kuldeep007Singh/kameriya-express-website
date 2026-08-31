@@ -22,9 +22,6 @@ export default function Navbar() {
             <span>+91 92656 30571</span>
             <span>contact@kameriyaexpress.com</span>
           </div>
-          <div className="utility-network">
-            Pan-India Network
-          </div>
         </div>
       </div>
 
