@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import {
-  PackageSearch, Truck, Plane, Building2, RefreshCcw, Globe2,
-  Building, Users, Award, Search,
+  PackageSearch, Truck, Home as HomeIcon, Zap, Users, Star,
+  Building, Globe2, Award, Search,
 } from 'lucide-react'
 import './Home.css'
 
@@ -17,18 +17,18 @@ export default function Home() {
   }
 
   const services = [
-    { icon: Truck, title: 'Surface Cargo', desc: 'Reliable road transportation for bulk B2B shipments across India.' },
-    { icon: Plane, title: 'Air Cargo', desc: 'Priority air freight for time-sensitive corporate consignments.' },
-    { icon: PackageSearch, title: 'Domestic Courier', desc: 'Door-to-door document and parcel courier with next-day delivery.' },
-    { icon: Building2, title: 'Corporate Accounts', desc: 'Dedicated B2B billing, reporting, and account support.' },
-    { icon: RefreshCcw, title: 'Reverse Logistics', desc: 'End-to-end returns handling for retail and e-commerce clients.' },
-    { icon: Globe2, title: 'Pan-India Distribution', desc: 'Multi-drop distribution across metros, tier-2 and tier-3 cities.' },
+    { icon: Globe2, title: 'Pan-India Network', desc: 'Reliable pickup and delivery across metros, tier-2 and tier-3 cities, nationwide.' },
+    { icon: HomeIcon, title: 'Door-to-Door Service', desc: 'We collect from your doorstep and deliver straight to the recipient — no drop-off points, no hassle.' },
+    { icon: Zap, title: 'Express Parcel Delivery', desc: 'Time-sensitive shipments handled with priority routing and next-day delivery options.' },
+    { icon: Users, title: 'Personal & Business Courier', desc: 'From individual parcels to high-volume business shipping — one partner for every kind of send.' },
+    { icon: Star, title: 'Priority Business Accounts', desc: 'Dedicated handling, consolidated billing, and personalised support for regular corporate clients.' },
+    { icon: Truck, title: 'Surface & Air Cargo', desc: 'Bulk freight and time-critical air cargo, tracked and accountable from pickup to delivery.' },
   ]
 
   const stats = [
     { icon: Building, value: '500+', label: 'Corporate Clients' },
-    { icon: Globe2, value: '25+', label: 'States Covered' },
-    { icon: Users, value: '10,000+', label: 'Shipments Delivered' },
+    { icon: Globe2, value: '28', label: 'States Covered' },
+    { icon: Users, value: '1,00,000+', label: 'Shipments Delivered' },
     { icon: Award, value: 'ISO 9001', label: '2008 Certified' },
   ]
 
@@ -84,7 +84,7 @@ export default function Home() {
           <span className="eyebrow">What We Offer</span>
           <h2>Total Transportation Solutions</h2>
           <p style={{ maxWidth: '60ch' }}>
-            From single-parcel courier to full-truck-load cargo — one accountable partner, one bill, complete visibility.
+            From a single personal parcel to a full-truck-load business shipment — one accountable partner, one bill, complete visibility.
           </p>
           <div className="service-grid">
             {services.map((s) => (
