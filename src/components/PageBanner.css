@@ -1,0 +1,33 @@
+.page-banner {
+  background: linear-gradient(115deg, var(--navy) 0%, var(--navy-dark) 100%);
+  padding: 4rem 0 4.5rem;
+}
+
+.page-banner-eyebrow {
+  color: #ffb35c;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.page-banner h1 {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  max-width: 28ch;
+}
+
+.page-banner-subtitle {
+  color: #c7cbe6;
+  max-width: 60ch;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .page-banner { padding: 3rem 0 3.5rem; }
+  .page-banner h1 { font-size: 1.7rem; }
+}
