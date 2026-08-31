@@ -36,7 +36,7 @@ export default function Contact() {
           <h3>Contact Details</h3>
           <p><strong>Phone:</strong> +91 9586516651, +91 9265630571</p>
           <p><strong>Email:</strong> contact@kameriyaexpress.com</p>
-          <p><strong>Head Office:</strong> Ahmedabad, Gujarat, India</p>
+          <p><strong>Head Office:</strong> L-7/A, Ghantakarn Mahaveer Market, Sarangpur, Ahmedabad, Gujarat, India</p>
           <p><strong>Business Hours:</strong> [Placeholder] Mon–Sat, 10:30 AM – 9:00 PM</p>
         </div>
       </div>
