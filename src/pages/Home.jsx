@@ -29,6 +29,7 @@ export default function Home() {
     { icon: Building, value: '500+', label: 'Corporate Clients' },
     { icon: Globe2, value: '28', label: 'States Covered' },
     { icon: Users, value: '1,00,000+', label: 'Shipments Delivered' },
+    { icon: Award, value: 'ISO 9001', label: '2008 Certified' },
   ]
 
   return (
@@ -36,7 +37,7 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div className="hero-copy">
-            <span className="hero-badge">&nbsp; Pan-India Network</span>
+            <span className="hero-badge">ISO 9001:2008 Certified &nbsp;|&nbsp; Pan-India Network</span>
             <h1>Total Transportation Solutions, Delivered on Target.</h1>
             <p className="hero-sub">
               Trusted B2B courier and cargo partner for enterprises across India —
