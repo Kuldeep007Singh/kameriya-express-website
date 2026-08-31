@@ -34,10 +34,10 @@ export default function Contact() {
 
         <div className="card">
           <h3>Contact Details</h3>
-          <p><strong>Phone:</strong> [Placeholder] +91 XXXXX XXXXX</p>
-          <p><strong>Email:</strong> [Placeholder] contact@kameriyaexpress.com</p>
-          <p><strong>Head Office:</strong> [Placeholder] Ahmedabad, Gujarat, India</p>
-          <p><strong>Business Hours:</strong> [Placeholder] Mon–Sat, 9:30 AM – 7:00 PM</p>
+          <p><strong>Phone:</strong>+91 9586516651, +91 9265630571</p>
+          <p><strong>Email:</strong>contact@kameriyaexpress.com</p>
+          <p><strong>Head Office:</strong>Ahmedabad, Gujarat, India</p>
+          <p><strong>Business Hours:</strong> [Placeholder] Mon–Sat, 10:30 AM – 9:00 PM</p>
         </div>
       </div>
     </div>
