@@ -6,8 +6,10 @@
 
 .utility-bar-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 1.5rem;
+  padding: 0.5rem 1.5rem;
+  position: relative;
 }
 
 .utility-links {
@@ -15,9 +17,15 @@
   gap: 1.5rem;
 }
 
-.iso-badge {
-  font-weight: 600;
-  color: #ffd699;
+.utility-network {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffb35c;
 }
 
 .navbar {
@@ -60,13 +68,6 @@
   border-bottom-color: var(--orange);
 }
 
-.navbar-admin.btn {
-  border-bottom: none !important;
-  text-transform: none !important;
-  padding: 0.5rem 1.1rem !important;
-  font-size: 0.85rem !important;
-}
-
 .navbar-toggle {
   display: none;
   flex-direction: column;
@@ -83,7 +84,9 @@
 }
 
 @media (max-width: 860px) {
-  .utility-links:last-child { display: none; }
+  .utility-bar-inner { flex-direction: column; gap: 0.4rem; padding: 0.6rem 1.5rem; }
+  .utility-network { position: static; transform: none; font-size: 0.9rem; }
+  .utility-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; justify-content: center; }
   .navbar-toggle { display: flex; }
 
   .navbar-links {
