@@ -1,4 +1,5 @@
 import { PackageSearch, Truck, Clock, Home, Building2, PackageCheck } from 'lucide-react'
+import PageBanner from '../components/PageBanner'
 
 const services = [
   { icon: PackageSearch, title: 'B2B & Personal Courier', desc: 'Document and parcel delivery for both corporate accounts and individual senders, with scheduled pickups and reliable turnaround.' },
@@ -11,23 +12,23 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="container section">
-      <span className="eyebrow">Services</span>
-      <h1>What We Offer</h1>
-      <p style={{ maxWidth: '65ch' }}>
-        From a single personal parcel to a full-truck-load business shipment, Kameriya
-        Express covers the full range of transportation needs — for individuals sending
-        occasionally and businesses shipping every day.
-      </p>
+    <div>
+      <PageBanner
+        eyebrow="Services"
+        title="What We Offer"
+        subtitle="From a single personal parcel to a full-truck-load business shipment — one accountable partner, one bill, complete visibility."
+      />
 
-      <div className="service-grid" style={{ marginTop: '2rem' }}>
-        {services.map((s) => (
-          <div className="service-tile" key={s.title}>
-            <div className="service-icon"><s.icon size={22} /></div>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-          </div>
-        ))}
+      <div className="container section">
+        <div className="service-grid">
+          {services.map((s) => (
+            <div className="service-tile" key={s.title}>
+              <div className="service-icon"><s.icon size={22} /></div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
