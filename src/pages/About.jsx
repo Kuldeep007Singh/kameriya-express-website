@@ -1,4 +1,5 @@
-import { Target, Award, Map, Truck } from 'lucide-react'
+import { Target, Award, Map } from 'lucide-react'
+import PageBanner from '../components/PageBanner'
 
 export default function About() {
   const points = [
@@ -8,32 +9,38 @@ export default function About() {
   ]
 
   return (
-    <div className="container section">
-      <span className="eyebrow">About Us</span>
-      <h1>About Kameriya Express</h1>
-      <p style={{ maxWidth: '70ch' }}>
-        Kameriya Express Couriers and Cargo Services has been moving India's businesses
-        forward since 2008. What started as a focused courier operation has grown into a
-        full pan-India transportation partner — handling everything from single
-        time-sensitive parcels to full-truck-load cargo for corporate accounts across the
-        country.
-      </p>
-      <p style={{ maxWidth: '70ch' }}>
-        We were ISO 9001:2008 certified the same year we started, and that commitment to
-        quality-managed, accountable operations has stayed at the core of how we work ever
-        since. Whether it's speed, nationwide reach, personal attention to your account, or
-        straightforward pricing you can plan around — we built Kameriya Express to deliver
-        on all of it, not just one.
-      </p>
+    <div>
+      <PageBanner
+        eyebrow="About Us"
+        title="Moving India's Businesses Forward Since 2008"
+        subtitle="A pan-India transportation partner built on reliability, reach, and real accountability."
+      />
 
-      <div className="service-grid" style={{ marginTop: '2.5rem' }}>
-        {points.map((p) => (
-          <div className="service-tile" key={p.title}>
-            <div className="service-icon"><p.icon size={22} /></div>
-            <h3>{p.title}</h3>
-            <p>{p.desc}</p>
-          </div>
-        ))}
+      <div className="container section">
+        <p style={{ maxWidth: '70ch', fontSize: '1.02rem' }}>
+          Kameriya Express Couriers and Cargo Services has been moving India's businesses
+          forward since 2008. What started as a focused courier operation has grown into a
+          full pan-India transportation partner — handling everything from single
+          time-sensitive parcels to full-truck-load cargo for corporate accounts across the
+          country.
+        </p>
+        <p style={{ maxWidth: '70ch', fontSize: '1.02rem' }}>
+          We were ISO 9001:2008 certified the same year we started, and that commitment to
+          quality-managed, accountable operations has stayed at the core of how we work ever
+          since. Whether it's speed, nationwide reach, personal attention to your account, or
+          straightforward pricing you can plan around — we built Kameriya Express to deliver
+          on all of it, not just one.
+        </p>
+
+        <div className="service-grid" style={{ marginTop: '3rem' }}>
+          {points.map((p) => (
+            <div className="service-tile" key={p.title}>
+              <div className="service-icon"><p.icon size={22} /></div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
