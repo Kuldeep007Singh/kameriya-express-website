@@ -20,7 +20,7 @@ export default function Navbar() {
           <div className="utility-links">
             <span>Ph: +91 95865 16651</span>
             <span>+91 92656 30571</span>
-            <span>contact@kameriyaexpress.com</span>
+            <span>kameriyaexpressahm@yahoo.com</span>
           </div>
         </div>
       </div>
