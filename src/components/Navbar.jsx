@@ -31,7 +31,17 @@ export default function Navbar() {
             <img src="/logo.png" alt="Kameriya Express logo" />
           </Link>
 
-          <nav className={`navbar-links ${open ? 'open' : ''}`}>
+          <button
+            type="button"
+            className="navbar-toggle"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((prev) => !prev)}
+          >
+            <span /><span /><span />
+          </button>
+
+          <nav className={open ? 'navbar-links open' : 'navbar-links'}>
             {links.map((link) => (
               <NavLink
                 key={link.to}
@@ -43,15 +53,6 @@ export default function Navbar() {
               </NavLink>
             ))}
           </nav>
-
-          <button
-            className="navbar-toggle"
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            aria-expanded={open}
-            onClick={() => setOpen(!open)}
-          >
-            <span /><span /><span />
-          </button>
         </div>
       </div>
     </header>
