@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <p>+91 9586516651, +91 9265630571</p>
-          <p>contact@kameriyaexpress.com</p>
+          <p>kameriyaexpressahm@yahoo.com</p>
           <p>L-7/A, Shree Ghantakarn Mahaveer Market, Sarangpur, Ahmedabad, Gujarat, India</p>
         </div>
       </div>
