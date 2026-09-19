@@ -14,6 +14,7 @@ export default function About() {
         eyebrow="About Us"
         title="Moving India's Businesses Forward Since 2008"
         subtitle="A pan-India transportation partner built on reliability, reach, and real accountability."
+        image="/images/services/about-team.jpg"
       />
 
       <div className="container section">
