@@ -161,7 +161,7 @@ input:focus, select:focus, textarea:focus {
   width: 44px;
   height: 44px;
   border-radius: var(--radius);
-  background: var(--navy);
+  background: var(--orange);
   color: var(--white);
   display: flex;
   align-items: center;
