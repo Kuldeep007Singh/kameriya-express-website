@@ -155,51 +155,68 @@
   .track-widget { transform: none; margin-top: 2rem; }
 }
 
-/* ── Full-width image-backed service rows ───────────────────────── */
+
+/* ── Full-width image blocks with overlaid text ─────────────────── */
 
 .services-section {
   padding-bottom: 0;
 }
 
-.service-rows {
+.service-blocks {
   display: flex;
   flex-direction: column;
   margin-top: 2.5rem;
 }
 
-.service-row {
+.service-block {
+  position: relative;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  min-height: 340px;
+  align-items: flex-end;
   border-top: 1px solid var(--line);
 }
 
-.service-row:last-child {
+.service-block:last-child {
   border-bottom: 1px solid var(--line);
 }
 
-.service-row-text {
-  flex: 0 0 42%;
+.service-block-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(10, 22, 64, 0.88) 0%,
+    rgba(10, 22, 64, 0.55) 35%,
+    rgba(10, 22, 64, 0.1) 65%,
+    rgba(10, 22, 64, 0) 100%
+  );
+}
+
+.service-block-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 4vw;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 3rem 4vw;
-  background: var(--paper-alt);
+  gap: 0.6rem;
 }
 
-.service-row-text h3 {
-  color: var(--navy);
-  font-size: 1.4rem;
+.service-block-content h3 {
+  color: var(--white);
+  font-size: 1.6rem;
   margin: 0;
 }
 
-.service-row-text p {
-  color: var(--grey);
+.service-block-content p {
+  color: #d7dae8;
   margin: 0;
-  max-width: 42ch;
+  max-width: 48ch;
 }
 
-.service-row .service-icon {
+.service-block .service-icon {
   width: 44px;
   height: 44px;
   display: flex;
@@ -208,51 +225,36 @@
   border-radius: 10px;
   background: var(--orange);
   color: var(--white);
+  margin-bottom: 0.4rem;
 }
 
-.service-row-image {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.service-row-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(10, 22, 64, 0.12) 0%, rgba(10, 22, 64, 0) 25%);
-}
-
-.service-row--pan-india-network .service-row-image {
+.service-block--pan-india-network {
   background-image: url('/images/services/pan-india-network.jpg');
 }
-.service-row--door-to-door .service-row-image {
+.service-block--door-to-door {
   background-image: url('/images/services/door-to-door.jpg');
 }
-.service-row--express-delivery .service-row-image {
+.service-block--express-delivery {
   background-image: url('/images/services/express-delivery.jpg');
 }
-.service-row--personal-business-courier .service-row-image {
+.service-block--personal-business-courier {
   background-image: url('/images/services/personal-business-courier.jpg');
 }
-.service-row--priority-accounts .service-row-image {
+.service-block--priority-accounts {
   background-image: url('/images/services/priority-accounts.jpg');
 }
-.service-row--surface-air-cargo .service-row-image {
+.service-block--surface-air-cargo {
   background-image: url('/images/services/surface-air-cargo.jpg');
 }
 
 @media (max-width: 860px) {
-  .service-row {
-    flex-direction: column;
-    min-height: 0;
+  .service-block {
+    min-height: 320px;
   }
-  .service-row-text {
-    flex: none;
+  .service-block-content {
     padding: 2rem 1.5rem;
   }
-  .service-row-image {
-    height: 220px;
+  .service-block-content h3 {
+    font-size: 1.3rem;
   }
 }
