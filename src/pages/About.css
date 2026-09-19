@@ -1,0 +1,15 @@
+.about-blocks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.about-block--mission {
+  background-image: url('/images/services/about-mission.jpg');
+}
+.about-block--certification {
+  background-image: url('/images/services/about-certification.jpg');
+}
+.about-block--reach {
+  background-image: url('/images/services/about-reach.jpg');
+}
