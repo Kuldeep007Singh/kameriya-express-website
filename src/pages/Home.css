@@ -1,6 +1,10 @@
 .hero {
-  background: var(--navy);
-  background-image: linear-gradient(115deg, var(--navy) 0%, var(--navy-dark) 100%);
+  background-image:
+    linear-gradient(115deg, rgba(10, 22, 64, 0.88) 0%, rgba(10, 22, 64, 0.82) 100%),
+    url('/images/services/main.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 4.5rem 0 0;
 }
 
@@ -149,4 +153,106 @@
   .stat { justify-content: flex-start; }
   .cta-inner { flex-direction: column; text-align: center; }
   .track-widget { transform: none; margin-top: 2rem; }
+}
+
+/* ── Full-width image-backed service rows ───────────────────────── */
+
+.services-section {
+  padding-bottom: 0;
+}
+
+.service-rows {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.service-row {
+  display: flex;
+  min-height: 340px;
+  border-top: 1px solid var(--line);
+}
+
+.service-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.service-row-text {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem 4vw;
+  background: var(--paper-alt);
+}
+
+.service-row-text h3 {
+  color: var(--navy);
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.service-row-text p {
+  color: var(--grey);
+  margin: 0;
+  max-width: 42ch;
+}
+
+.service-row .service-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--orange);
+  color: var(--white);
+}
+
+.service-row-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.service-row-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 22, 64, 0.12) 0%, rgba(10, 22, 64, 0) 25%);
+}
+
+.service-row--pan-india-network .service-row-image {
+  background-image: url('/images/services/pan-india-network.jpg');
+}
+.service-row--door-to-door .service-row-image {
+  background-image: url('/images/services/door-to-door.jpg');
+}
+.service-row--express-delivery .service-row-image {
+  background-image: url('/images/services/express-delivery.jpg');
+}
+.service-row--personal-business-courier .service-row-image {
+  background-image: url('/images/services/personal-business-courier.jpg');
+}
+.service-row--priority-accounts .service-row-image {
+  background-image: url('/images/services/priority-accounts.jpg');
+}
+.service-row--surface-air-cargo .service-row-image {
+  background-image: url('/images/services/surface-air-cargo.jpg');
+}
+
+@media (max-width: 860px) {
+  .service-row {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .service-row-text {
+    flex: none;
+    padding: 2rem 1.5rem;
+  }
+  .service-row-image {
+    height: 220px;
+  }
 }
