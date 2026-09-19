@@ -109,29 +109,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section services-section">
-        <div className="container">
-          <span className="eyebrow">What We Offer</span>
-          <h2>Total Transportation Solutions</h2>
-          <p style={{ maxWidth: '60ch' }}>
-            From a single personal parcel to a full-truck-load business shipment — one accountable partner, one bill, complete visibility.
-          </p>
-        </div>
+     <section className="section services-section">
+  <div className="container">
+    <span className="eyebrow">What We Offer</span>
+    <h2>Total Transportation Solutions</h2>
+    <p style={{ maxWidth: '60ch' }}>
+      From a single personal parcel to a full-truck-load business shipment — one accountable partner, one bill, complete visibility.
+    </p>
+  </div>
 
-        <div className="service-rows">
-          {services.map((s) => (
-            <div className={`service-row service-row--${s.slug}`} key={s.slug}>
-              <div className="service-row-text">
-                <div className="service-icon"><s.icon size={22} /></div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-              </div>
-              <div className="service-row-image" aria-hidden="true" />
-            </div>
-          ))}
+  <div className="service-blocks">
+    {services.map((s) => (
+      <div className={`service-block service-block--${s.slug}`} key={s.slug}>
+        <div className="service-block-overlay" />
+        <div className="service-block-content">
+          <div className="service-icon"><s.icon size={22} /></div>
+          <h3>{s.title}</h3>
+          <p>{s.desc}</p>
         </div>
-      </section>
-
+      </div>
+    ))}
+  </div>
+</section>
+      
       <section className="section cta-band">
         <div className="container cta-inner">
           <div>
