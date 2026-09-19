@@ -1,0 +1,29 @@
+.services-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.services-blocks .service-block {
+  border-radius: var(--radius);
+}
+
+.services-block--personal-business-courier {
+  background-image: url('/images/services/personal-business-courier.jpg');
+}
+.services-block--surface-air-cargo {
+  background-image: url('/images/services/surface-air-cargo.jpg');
+}
+.services-block--express-delivery {
+  background-image: url('/images/services/express-delivery.jpg');
+}
+.services-block--door-to-door {
+  background-image: url('/images/services/door-to-door.jpg');
+}
+.services-block--priority-accounts {
+  background-image: url('/images/services/priority-accounts.jpg');
+}
+.services-block--real-time-tracking {
+  background-image: url('/images/services/real-time-tracking.jpg');
+}
