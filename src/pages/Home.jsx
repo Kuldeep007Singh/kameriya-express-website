@@ -17,12 +17,42 @@ export default function Home() {
   }
 
   const services = [
-    { icon: Globe2, title: 'Pan-India Network', desc: 'Reliable pickup and delivery across metros, tier-2 and tier-3 cities, nationwide.' },
-    { icon: HomeIcon, title: 'Door-to-Door Service', desc: 'We collect from your doorstep and deliver straight to the recipient — no drop-off points, no hassle.' },
-    { icon: Zap, title: 'Express Parcel Delivery', desc: 'Time-sensitive shipments handled with priority routing and next-day delivery options.' },
-    { icon: Users, title: 'Personal & Business Courier', desc: 'From individual parcels to high-volume business shipping — one partner for every kind of send.' },
-    { icon: Star, title: 'Priority Business Accounts', desc: 'Dedicated handling, consolidated billing, and personalised support for regular corporate clients.' },
-    { icon: Truck, title: 'Surface & Air Cargo', desc: 'Bulk freight and time-critical air cargo, tracked and accountable from pickup to delivery.' },
+    {
+      slug: 'pan-india-network',
+      icon: Globe2,
+      title: 'Pan-India Network',
+      desc: 'Reliable pickup and delivery across metros, tier-2 and tier-3 cities, nationwide.',
+    },
+    {
+      slug: 'door-to-door',
+      icon: HomeIcon,
+      title: 'Door-to-Door Service',
+      desc: 'We collect from your doorstep and deliver straight to the recipient — no drop-off points, no hassle.',
+    },
+    {
+      slug: 'express-delivery',
+      icon: Zap,
+      title: 'Express Parcel Delivery',
+      desc: 'Time-sensitive shipments handled with priority routing and next-day delivery options.',
+    },
+    {
+      slug: 'personal-business-courier',
+      icon: Users,
+      title: 'Personal & Business Courier',
+      desc: 'From individual parcels to high-volume business shipping — one partner for every kind of send.',
+    },
+    {
+      slug: 'priority-accounts',
+      icon: Star,
+      title: 'Priority Business Accounts',
+      desc: 'Dedicated handling, consolidated billing, and personalised support for regular corporate clients.',
+    },
+    {
+      slug: 'surface-air-cargo',
+      icon: Truck,
+      title: 'Surface & Air Cargo',
+      desc: 'Bulk freight and time-critical air cargo, tracked and accountable from pickup to delivery.',
+    },
   ]
 
   const stats = [
@@ -79,22 +109,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section services-section">
         <div className="container">
           <span className="eyebrow">What We Offer</span>
           <h2>Total Transportation Solutions</h2>
           <p style={{ maxWidth: '60ch' }}>
             From a single personal parcel to a full-truck-load business shipment — one accountable partner, one bill, complete visibility.
           </p>
-          <div className="service-grid">
-            {services.map((s) => (
-              <div className="service-tile" key={s.title}>
+        </div>
+
+        <div className="service-rows">
+          {services.map((s) => (
+            <div className={`service-row service-row--${s.slug}`} key={s.slug}>
+              <div className="service-row-text">
                 <div className="service-icon"><s.icon size={22} /></div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </div>
-            ))}
-          </div>
+              <div className="service-row-image" aria-hidden="true" />
+            </div>
+          ))}
         </div>
       </section>
 
