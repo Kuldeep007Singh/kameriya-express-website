@@ -3,6 +3,12 @@
   padding: 4rem 0 4.5rem;
 }
 
+.page-banner--image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .page-banner-eyebrow {
   color: #ffb35c;
   font-weight: 700;
