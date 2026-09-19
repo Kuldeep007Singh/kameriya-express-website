@@ -165,6 +165,7 @@
 .service-blocks {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   margin-top: 2.5rem;
 }
 
@@ -175,7 +176,7 @@
   background-position: center;
   display: flex;
   align-items: flex-end;
-  border-top: 1px solid var(--line);
+  border-radius: var(--radius);
 }
 
 .service-block:last-child {
