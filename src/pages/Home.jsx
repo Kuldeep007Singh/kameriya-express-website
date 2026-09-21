@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import {
   PackageSearch, Truck, Home as HomeIcon, Zap, Users, Star,
-  Building, Globe2, Award, Search,
+  Building, Globe2, Search,
 } from 'lucide-react'
 import './Home.css'
 
@@ -55,11 +55,12 @@ export default function Home() {
     },
   ]
 
+  // TODO: confirm the first three figures are accurate before keeping them public.
   const stats = [
     { icon: Building, value: '500+', label: 'Corporate Clients' },
     { icon: Globe2, value: '28', label: 'States Covered' },
     { icon: Users, value: '1,00,000+', label: 'Shipments Delivered' },
-    { icon: Award, value: 'ISO 9001', label: '2008 Certified' },
+    { icon: PackageSearch, value: 'Live', label: 'Parcel Tracking' },
   ]
 
   return (
@@ -67,7 +68,7 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div className="hero-copy">
-            <span className="hero-badge">ISO 9001:2008 Certified &nbsp;|&nbsp; Pan-India Network</span>
+            <span className="hero-badge">Pan-India Network &nbsp;|&nbsp; Based in Ahmedabad</span>
             <h1>Total Transportation Solutions, Delivered on Target.</h1>
             <p className="hero-sub">
               Trusted B2B courier and cargo partner for enterprises across India —
